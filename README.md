@@ -1,3 +1,4 @@
+#宿舍網路設定懶人包
 ##網卡
 * 每一張網卡都有一個Mac address
 * Mac address像是身分證字號
