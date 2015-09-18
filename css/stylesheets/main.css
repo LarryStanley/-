@@ -1,0 +1,73 @@
+/* line 17, ../sass/main.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: #607D8B;
+  text-align: center;
+}
+
+/* line 27, ../sass/main.scss */
+.center {
+  position: absolute;
+  height: 400px;
+  margin-top: -200px;
+  top: 50%;
+  left: 50%;
+}
+@media (min-width: 1200px) {
+  /* line 27, ../sass/main.scss */
+  .center {
+    width: 1170px;
+    margin-left: -585px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 27, ../sass/main.scss */
+  .center {
+    width: 970px;
+    margin-left: -485px;
+  }
+}
+@media (min-width: 758px) {
+  /* line 27, ../sass/main.scss */
+  .center {
+    width: 750px;
+    margin-left: -375px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 27, ../sass/main.scss */
+  .center {
+    width: 80%;
+    margin-left: -40%;
+  }
+}
+/* line 58, ../sass/main.scss */
+.center .well {
+  padding: 0px 0px 0px 0px;
+}
+/* line 60, ../sass/main.scss */
+.center .well .btn-default {
+  color: #3F51B5;
+}
+/* line 64, ../sass/main.scss */
+.center .well ul {
+  text-align: left;
+}
+
+/* line 70, ../sass/main.scss */
+#description {
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  width: 100%;
+  color: white;
+  background: #f1ac57;
+  background: -moz-linear-gradient(top, #f1ac57 0%, #da6c4a 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f1ac57), color-stop(100%, #da6c4a));
+  background: -webkit-linear-gradient(top, #f1ac57 0%, #da6c4a 100%);
+  background: -o-linear-gradient(top, #f1ac57 0%, #da6c4a 100%);
+  background: -ms-linear-gradient(top, #f1ac57 0%, #da6c4a 100%);
+  background: linear-gradient(to bottom, #f1ac57 0%, #da6c4a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1ac57', endColorstr='#da6c4a', GradientType=0 );
+}

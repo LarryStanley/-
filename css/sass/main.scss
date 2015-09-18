@@ -1,0 +1,85 @@
+@import "compass/css3";
+@import "breakpoint";
+
+$large: 1200px;
+$medium: 992px;
+$small: 758px;
+$xsmall: max-width 768px;
+
+$largeWidth: 1170px;
+$mediumWidth: 970px;
+$smallWidth: 750px;
+
+$textColor: white;
+
+$contentHeight: 400px;
+
+html, body {
+	height: 100%;
+	width: 100%;
+	color: $textColor;
+
+	background-color: #607D8B;
+
+	text-align: center;
+}
+
+.center {
+	position: absolute;
+	
+	height: $contentHeight;
+	margin-top: -$contentHeight/2;
+	top: 50%;
+	left: 50%;
+
+	@include breakpoint($large) {
+		$width: $largeWidth;
+		width: $width;
+		margin-left: -$width/2;
+	}
+
+	@include breakpoint($medium) {
+		$width: $mediumWidth;
+		width: $width;
+		margin-left: -$width/2;
+	}
+
+	@include breakpoint($small) {
+		$width: $smallWidth;
+		width: $width;
+		margin-left: -$width/2;
+	}
+
+	@include breakpoint($xsmall) {
+		width: 80%;
+		margin-left: -40%;
+	}
+
+	.well {
+		padding: 0px 0px 0px 0px;
+		.btn-default {
+			color: #3F51B5;
+		}
+
+		ul {
+			text-align: left;
+		}
+	}
+}
+
+#description {
+	padding: 10px 10px 10px 10px;
+	position: relative;
+	width: 100%;
+
+	color: white;
+
+	background: rgba(241,172,87,1);
+background: -moz-linear-gradient(top, rgba(241,172,87,1) 0%, rgba(218,108,74,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241,172,87,1)), color-stop(100%, rgba(218,108,74,1)));
+	background: -webkit-linear-gradient(top, rgba(241,172,87,1) 0%, rgba(218,108,74,1) 100%);
+	background: -o-linear-gradient(top, rgba(241,172,87,1) 0%, rgba(218,108,74,1) 100%);
+	background: -ms-linear-gradient(top, rgba(241,172,87,1) 0%, rgba(218,108,74,1) 100%);
+	background: linear-gradient(to bottom, rgba(241,172,87,1) 0%, rgba(218,108,74,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1ac57', endColorstr='#da6c4a', GradientType=0 );
+}

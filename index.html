@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>中央大學宿舍網路設定懶人包</title>
+
+    <meta name="description" content="中央大學宿舍網路設定懶人包">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="中央大學宿舍網路設定懶人包" />
+    <meta property="og:site_name" content="中央大學宿舍網路設定懶人包"/>
+    <meta property="og:url" content="http://larrystanley.github.io/NCU-Network-Setting/"/>
+    <meta property="og:description" content="中央大學宿舍網路設定懶人包">
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="http://larrystanley.github.io/HorrorStory/image.png"/>
+
+    <link href="image.png" rel="image_src" type="image/jpeg">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css">
+    <link rel="stylesheet" href="css/stylesheets/animate.min.css">
+    <link rel="stylesheet" href="css/stylesheets/main.css">
+
+</head>
+<body>
+	<div class="center">
+		<div class="well">
+			<div id="description" class="animated fadeIn">
+				<h1>中央大學宿舍網路設定懶人包</h1>
+			</div>
+			<div id="selection" class="animated fadeIn">
+				<p>
+					你準備好進入網路世界了嗎？
+					<button class="btn btn-default" onclick="buttonClick('1')">立即開始</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script>
+	var data = {
+		"1" : {
+			"description" : "<h1>請選擇您的連線方式</h1>",
+			"selection": '<button class="btn btn-default" onclick="buttonClick(\'2\')"><i class="fa fa-desktop fa-2x"></i><br>電腦</button><button class="btn btn-default" onclick="buttonClick(\'2\')"><i class="fa fa-wifi fa-2x"></i><br>無線網路</button>',
+			"next" : "2"
+		},
+
+		"2" : {
+			"description": "<h1>請問您的作業系統是？</h1>",
+			"selection": '<button class="btn btn-default">Windows</button><button class="btn btn-default">Mac OS</button>',
+			"next": "3"
+		}
+	};
+
+	function buttonClick(next) {
+		$("#description").html(data[next]['description']);
+		$("#selection").html(data[next]['selection']);
+		next = data[next]["next"];
+	}
+</script>
+</html>
